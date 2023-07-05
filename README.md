@@ -1,106 +1,121 @@
-#### CFPB Open Source Project Template Instructions
+# Your Financial Path to Graduation
 
-1. Create a new project.
-2. [Copy these files into the new project](#installation)
-3. Update the README, replacing the contents below as prescribed.
-4. Add any libraries, assets, or hard dependencies whose source code will be included
-   in the project's repository to the _Exceptions_ section in the [TERMS](TERMS.md).
-  - If no exceptions are needed, remove that section from TERMS.
-5. If working with an existing code base, answer the questions on the [open source checklist](opensource-checklist.md)
-6. Delete these instructions and everything up to the _Project Title_ from the README.
-7. Write some great software and tell people about it.
+This is a standalone front end for Your Financial Path to Graduation,
+a tool created by the Consumer Financial Protection Bureau
+to help students considering a college program forecast their costs
+and how they will pay for them.
+The CFPB hosts
+[the original tool](https://www.consumerfinance.gov/paying-for-college/your-financial-path-to-graduation/), but is providing this code for organizations that may want to
+stand up their own version of the tool with their own branding or modified content.
 
-> Keep the README fresh! It's the first thing people see and will make the initial impression.
+_(screenshot to be added)_
 
-## Installation
-
-To install all of the template files, run the following script from the root of your project's directory:
-
-```
-bash -c "$(curl -s https://raw.githubusercontent.com/CFPB/development/main/open-source-template.sh)"
-```
-
-----
-
-# Project Title
-
-**Description**:  Put a meaningful, short, plain-language description of what
-this project is trying to accomplish and why it matters.
-Describe the problem(s) this project solves.
-Describe how this software can improve the lives of its audience.
-
-Other things to include:
-
-  - **Technology stack**: Indicate the technological nature of the software, including primary programming language(s) and whether the software is intended as standalone or as a module in a framework or other ecosystem.
-  - **Status**:  Alpha, Beta, 1.1, etc. It's OK to write a sentence, too. The goal is to let interested people know where this project is at. This is also a good place to link to the [CHANGELOG](CHANGELOG.md).
-  - **Links to production or demo instances**
-  - Describe what sets this apart from related-projects. Linking to another doc or page is OK if this can't be expressed in a sentence or two.
+The front end is a static, single-page application
+that connects to APIs hosted by the CFPB
+that provide the back-end data for various features.
+It requires Node 16 to build its CSS, JavaScript, and Nunjucks templates.
 
 
-**Screenshot**: If the software has visual components, place a screenshot after the description; e.g.,
+## ℹ️ Current status
 
-![](https://raw.githubusercontent.com/cfpb/open-source-project-template/main/screenshot.png)
+This front end can currently be run in a local development environment
+against your own local consumerfinance.gov environment running concurrently,
+provided that consumerfinance.gov environment has
+the data needed to power this tool in its database.
+It also requires the CORS updates proposed in
+[cfpb/consumerfinance.gov#7859](https://github.com/cfpb/consumerfinance.gov/pull/7859).
+Once that is merged and deployed to the consumerfinance.gov production environment,
+having a locally running version will not be necessary.
 
 
 ## Dependencies
 
-Describe any dependencies that must be installed for this software to work.
-This includes programming languages, databases or other storage mechanisms, build tools, frameworks, and so forth.
-If specific versions of other software are required, or known not to work, call that out.
+- [Node.js](https://nodejs.org/) v16
+  - We recommend using a tool like [nvm](https://github.com/nvm-sh/nvm)
+    or [fnm](https://github.com/Schniz/fnm)
+    to install and manage different versions of Node.
+- **Temporary** (see note above): A local development environment of
+  [consumerfinance.gov](https://github.com/cfpb/consumerfinance.gov)
+  with the data necessary to power the APIs in its database.
+
 
 ## Installation
 
-Detailed instructions on how to install, configure, and get the project running.
-This should be frequently tested to ensure reliability. Alternatively, link to
-a separate [INSTALL](INSTALL.md) document.
+1. `npm install` to install the necessary dependencies
+1. `npm run dev` to build the application and launch a server at http://localhost:3000
+
 
 ## Configuration
 
-If the software is configurable, describe it in detail, either here or in other documentation to which you link.
+_(simple branding configuration mechanism to be added and documented here)_
+
 
 ## Usage
 
-Show users how to use the software.
-Be specific.
-Use appropriate formatting when showing code snippets.
+To rebuild the app assets after making any code changes, run `npm run build`.
 
-## How to test the software
 
-If the software includes automated tests, detail how to run those tests.
+## Linting, formatting, and testing
 
-## Known issues
+`npm test` will run both linting/formatting and unit tests.
 
-Document any known significant shortcomings with the software.
+### Linting and formatting
+
+`npm run lint` will lint and format the styles and scripts.
+
+### JavaScript unit tests
+
+`npm run jest` will run the JavaScript unit tests and calculate coverage.
+
+### Cypress integration tests
+
+`npm run cypress` will run the suite of integration tests using Cypress.
+These can take a while!
+
+
+## Next development priorities
+
+In rough order of importance:
+
+- Header and footer need a basic design with a simple configuration mechanism
+  so that they can be customized without altering source files.
+  - OpenGraph properties also need some sensible defaults and configurability.
+- Icons have temporary placeholder text; need to be replaced with their actual SVG code.
+- May need to delay init of CostsGroup, and they are currently not closable once opened.
+- Set `return_user` context to bypass intro if user is returning via personal URL.
+- Eliminate requests for Avenir Next (coming from cf-typography).
+- Provide a simple Docker container for easy deployment.
+- Eliminate feedback forms, or are they useful as placebo "questions for reflection"?
+- Optimize hero image and serve different sizes to different viewports.
+- The specific `npm run scripts` and `npm run styles` commands
+  don't put their results in the correct folder.
+- `npm run watch` doesn't watch enough files to be useful.
+
 
 ## Getting help
 
-Instruct users how to get help with this software; this might include links to an issue tracker, wiki, mailing list, etc.
+Use the [issue tracker](https://github.com/cfpb/grad-path/issues)
+to follow the development conversation.
+If you find a bug not listed in the issue tracker,
+please [file a bug report](https://github.com/cfpb/grad-path/issues/new).
 
-**Example**
-
-If you have questions, concerns, bug reports, etc, please file an issue in this repository's Issue Tracker.
 
 ## Getting involved
 
-This section should detail why people should get involved and describe key areas you are
-currently focusing on; e.g., trying to get feedback on features, fixing certain bugs, building
-important pieces, etc.
+We welcome your feedback and contributions.
+See the [contribution guidelines](CONTRIBUTING.md) for more details.
 
-General instructions on _how_ to contribute should be stated with a link to [CONTRIBUTING](CONTRIBUTING.md).
-
-
-----
+---
 
 ## Open source licensing info
+
 1. [TERMS](TERMS.md)
 2. [LICENSE](LICENSE)
 3. [CFPB Source Code Policy](https://github.com/cfpb/source-code-policy/)
 
-
-----
+---
 
 ## Credits and references
 
-1. Projects that inspired you
-2. Related projects
-3. Books, papers, talks, or other sources that have meaningful impact or influence on this project
+This project uses the [CFPB Design System](https://cfpb.github.io/design-system/)
+as the basis of its user interface and layout components.
