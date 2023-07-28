@@ -47,7 +47,7 @@
   <div class="m-notification
               {{- type -}}
               {{- ' m-notification__visible' if is_visible else '' -}}">
-      {{ 'icon::' ~ icon }}
+      {% include 'icons/' ~ icon ~ '.svg' %}
       <div class="m-notification_content"
           {{ 'role="alert"' if type == 'warning' or type == 'error' else '' }}>
           {%- if message %}

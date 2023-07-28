@@ -43,10 +43,10 @@
                {{ value.value }}
             </span>
             <span class="o-costs-group_cue-open" role="img" aria-label="{{ 'Edit' if value.is_editable else 'Show' }}">
-                {% if value.is_editable %}icon::edit{% else %}icon::plus-round{% endif %}
+                {% if value.is_editable %}{% include 'icons/edit.svg' %}{% else %}{% include 'icons/plus-round.svg' %}{% endif %}
             </span>
             <span class="o-costs-group_cue-close" role="img" aria-label="{{ 'Save' if value.is_editable else 'Hide' }}">
-                {% if value.is_editable %}icon::approved-round{% else %}icon::minus-round{% endif %}
+                {% if value.is_editable %}{% include 'icons/approved-round.svg' %}{% else %}{% include 'icons/minus-round.svg' %}{% endif %}
             </span>
         </span>
         </span>
