@@ -70,7 +70,7 @@ const appView = {
   },
 
   _handleCopyLinkBtnKeypress: (event) => {
-    if (event.keyCode === 13) {
+    if (event.keyCode === 'Enter') {
       appView._handleCopyLinkBtn(event);
     }
   },
@@ -148,8 +148,6 @@ function _addButtonListeners() {
   );
   appView._copyLinkBtn.forEach((elem) => {
     elem.addEventListener('click', appView._handleCopyLinkBtn);
-  });
-  appView._copyLinkBtn.forEach((elem) => {
     elem.addEventListener('keyup', appView._handleCopyLinkBtnKeypress);
   });
   appView._includeParentPlusBtn.addEventListener(
@@ -183,12 +181,10 @@ function _handleActionPlanClick(event) {
 /**
  * Initialize Costs Groups organism
  */
-// setTimeout(() => {
-//   const collegeCosts = document.querySelector('.college-costs');
-//   console.log('Costs.Group.init(collegeCosts)');
-//   CostsGroup.init(collegeCosts);
-// }, 20000);
-const collegeCosts = document.querySelector('.college-costs');
-CostsGroup.init(collegeCosts);
+setTimeout(() => {
+  console.log('Costs.Group.init(collegeCosts)');
+  const collegeCosts = document.querySelector('.college-costs');
+  CostsGroup.init(collegeCosts);
+}, 5000);
 
 export { appView };
