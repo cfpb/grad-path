@@ -1,8 +1,9 @@
 import { mkdirSync, writeFileSync } from 'fs';
 import nunjucks from 'nunjucks';
 
+import customization from '../config/customization.js';
 import environment from '../config/environment.js';
-const { unprocessed } = environment.paths;
+const { modules, unprocessed } = environment.paths;
 
 const njkPaths = `${unprocessed}/templates`;
 
@@ -11,7 +12,7 @@ const njkPaths = `${unprocessed}/templates`;
  */
 function templates(baseConfig) {
   nunjucks.configure(njkPaths, { throwOnUndefined: true });
-  const result = nunjucks.render('index.html', { org_name: 'foobar' });
+  const result = nunjucks.render('index.html', customization.context);
   mkdirSync(baseConfig.outdir, { recursive: true });
   writeFileSync(`${baseConfig.outdir}/index.html`, result);
 }

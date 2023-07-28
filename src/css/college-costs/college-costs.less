@@ -1,3 +1,11 @@
+// Borrowed from consumerfinance.gov's cf-enhancements/layout.less
+.wrapper__match-content {
+  .respond-to-min( @bp-sm-min, {
+    max-width: @grid_wrapper-width - ( @grid_gutter-width * 2 );
+  } );
+}
+
+
 .college-costs {
   // remove border between sidebar and main content
   & .content_main {
