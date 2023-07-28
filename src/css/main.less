@@ -17,14 +17,17 @@
 @import (less) 'cfpb-expandables.less';
 @import (less) 'cfpb-tables.less';
 
-// Import components borrowed from consumerfinance.gov
-@import (less) 'organisms/secondary-nav.less';
-@import (less) 'skip-nav.less';
-
 // Override the Design System theme variables with colors from the brand color palette
 @import (less) 'cf-theme-overrides.less';
 
-// Import the college-costs.less file
+// Import styles for components borrowed from consumerfinance.gov
+@import (less) 'molecules/hero.less';
+@import (less) 'organisms/header.less';
+@import (less) 'organisms/footer.less';
+@import (less) 'organisms/secondary-nav.less';
+@import (less) 'skip-nav.less';
+
+// Import app-specific Less files
 @import (less) 'college-costs/vars.less';
 @import (less) 'college-costs/college-costs.less';
 @import (less) 'college-costs/charts.less';
@@ -34,6 +37,7 @@
 @import (less) 'college-costs/search.less';
 @import (less) 'college-costs/state-based.less';
 
+// Import app-specific print styles
 .respond-to-print( {
   @import (less) 'print.css';
 } );
