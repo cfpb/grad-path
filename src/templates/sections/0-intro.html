@@ -5,7 +5,7 @@
                 <div class="m-notification
                             m-notification__error
                             u-hide-if-js">
-                    icon::error-round
+                    {% include 'icons/error-round.svg' %}
                     <div class="m-notification_content">
                         <div class="h4 m-notification_message">
                             This tool is not supported in your browser.
@@ -15,7 +15,7 @@
                 </div>
                 <div class="m-notification
                             m-notification__visible">
-                    icon::updating
+                    {% include 'icons/updating.svg' %}
                     <div class="m-notification_content">
                         <div class="h4 m-notification_message">The page is loading…</div>
                     </div>
@@ -26,48 +26,19 @@
         <section class="m-hero">
             <div class="m-hero_wrapper">
                 <div class="m-hero_text">
-                    <h1 class="m-hero_heading">Your financial path to graduation</h1>
-                    <div class="m-hero_subhead">
-                        <p>Have a financial aid offer? We'll help you plan to finish your program with debt you can afford.</p>
-                    </div>
+                    <h1 class="m-hero_heading">{{ tool_name }}</h1>
+                    {% if hero_paragraph %}
+                        <div class="m-hero_subhead">
+                            <p>{{ hero_paragraph }}</p>
+                        </div>
+                    {% endif %}
                 </div>
                 <div class="m-hero_image-wrapper">
-                    <div class="m-hero_image"></div>
+                    <div class="m-hero_image">
+                        <img src="img/hero_940.png" alt="">
+                    </div>
                 </div>
             </div>
-            <style>
-                .m-hero {
-                        --m-hero-background-color: #b4d2d1;
-                        background-color: #b4d2d1;
-                    }
-
-                .m-hero_image {
-                    background-image: url('src/img/hero_940.png');
-                    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
-                        src='src/img/hero_940.png',
-                        sizingMethod='scale');
-                    padding-bottom: 38.61702127659574%;
-                }
-
-                @media screen and (min-width: 37.5625em) {
-                    .m-hero_image {
-                        background-image: url('src/img/hero_940.png');
-                        filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
-                            src='src/img/hero_940.png',
-                            sizingMethod='scale');
-                        padding-bottom: 38.61702127659574%;
-                    }
-
-                    .m-hero__jumbo .m-hero_wrapper,
-                    .m-hero__50-50 .m-hero_wrapper,
-                    .m-hero__overlay .m-hero_wrapper {
-                        background-image: url('src/img/hero_940.png');
-                        filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
-                            src='src/img/hero_940.png',
-                            sizingMethod='scale');
-                    }
-                }
-            </style>
         </section>
 
         <div class="content_wrapper">
