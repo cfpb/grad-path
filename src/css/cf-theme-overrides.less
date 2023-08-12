@@ -52,10 +52,7 @@
 
 // Web fonts
 
-@webfont-regular: Arial;
-@webfont-italic: Arial;
-@webfont-medium: Arial;
-@webfont-demi: Arial;
+@font-stack: system-ui, sans-serif;
 
 /* cfpb-buttons
    ========================================================================== */
@@ -218,6 +215,8 @@
    ========================================================================== */
 
 // Webfont variables
+// This is the path to your stylesheet containing @font-face rules.
+@font-face-path: '';  // Set to empty string to prevent loading of any.
 // This is the path for self-hosted fonts.
 @cf-fonts-path: '/static/fonts';
 
