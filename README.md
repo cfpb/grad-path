@@ -84,6 +84,7 @@ In rough order of importance:
 - [ ] CostsGroup issues:
   - [x] Need to delay init of CostsGroup
   - [ ] They are currently not closable once opened
+  - [ ] Consider simplifying to a `details` element implementation
 - [ ] Use JS to bypass intro if user is returning via personal URL.
 - [ ] Eliminate requests for Avenir Next (coming from cf-typography).
 - [ ] Provide a simple Docker container for easy deployment.
