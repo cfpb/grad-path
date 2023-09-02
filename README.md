@@ -113,11 +113,14 @@ In rough order of importance:
   - [x] Need to delay init of CostsGroup
   - [ ] They are currently not closable once opened
   - [ ] Consider simplifying to a `details` element implementation
-- [ ] Use JS to bypass intro if user is returning via personal URL.
+- [x] Use JS to bypass intro if user is returning via personal URL.
 - [x] Eliminate requests for Avenir Next (coming from cf-typography).
 - [x] Provide a simple Docker container for easy deployment.
+- [ ] Accessibility testing and remediation
+- [ ] Document config/customization options
 - [ ] Eliminate feedback forms, or are they useful as placebo "questions for reflection"?
 - [ ] Optimize hero image and serve different sizes to different viewports.
+- [ ] Add favicon/apple-touch-icon (or delete references)
 - [ ] The specific `npm run scripts`, `styles`, and `templates` commands don't put their results in the correct folder.
 - [ ] `npm run watch` doesn't watch enough files to be useful.
 - [x] Audit npm packages and remove unneeded ones
