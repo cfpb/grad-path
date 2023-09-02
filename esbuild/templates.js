@@ -5,7 +5,10 @@ import customization from '../config/customization.js';
 import environment from '../config/environment.js';
 const { modules, unprocessed } = environment.paths;
 
-const njkPaths = [`${unprocessed}/templates`, `${modules}/@cfpb/cfpb-icons/src`];
+const njkPaths = [
+  `${unprocessed}/templates`,
+  `${modules}/@cfpb/cfpb-icons/src`,
+];
 
 /**
  * @param {object} baseConfig - The base esbuild configuration.

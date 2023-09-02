@@ -25,7 +25,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/58</span>
+                <span class='fraction'>0/59</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/58</span>
+                <span class='fraction'>0/59</span>
             </div>
         
             
@@ -253,11 +253,7 @@
 <a name='L188'></a><a href='#L188'>188</a>
 <a name='L189'></a><a href='#L189'>189</a>
 <a name='L190'></a><a href='#L190'>190</a>
-<a name='L191'></a><a href='#L191'>191</a>
-<a name='L192'></a><a href='#L192'>192</a>
-<a name='L193'></a><a href='#L193'>193</a>
-<a name='L194'></a><a href='#L194'>194</a>
-<a name='L195'></a><a href='#L195'>195</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L191'></a><a href='#L191'>191</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -407,8 +403,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -442,13 +436,11 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/* This file handles view items which apply only to the "state" of the
@@ -523,7 +515,7 @@ const appView = <span class="cstat-no" title="statement not covered" >{</span>
   },
 &nbsp;
   _handleCopyLinkBtnKeypress: <span class="fstat-no" title="function not covered" >(e</span>vent) =&gt; {
-<span class="cstat-no" title="statement not covered" >    if (event.keyCode === 13) {</span>
+<span class="cstat-no" title="statement not covered" >    if (event.keyCode === 'Enter') {</span>
 <span class="cstat-no" title="statement not covered" >      appView._handleCopyLinkBtn(event);</span>
     }
   },
@@ -601,8 +593,6 @@ function <span class="fstat-no" title="function not covered" >_addButtonListener
   );
 <span class="cstat-no" title="statement not covered" >  appView._copyLinkBtn.forEach(<span class="fstat-no" title="function not covered" >(e</span>lem) =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >    elem.addEventListener('click', appView._handleCopyLinkBtn);</span>
-  });
-<span class="cstat-no" title="statement not covered" >  appView._copyLinkBtn.forEach(<span class="fstat-no" title="function not covered" >(e</span>lem) =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >    elem.addEventListener('keyup', appView._handleCopyLinkBtnKeypress);</span>
   });
 <span class="cstat-no" title="statement not covered" >  appView._includeParentPlusBtn.addEventListener(</span>
@@ -636,13 +626,11 @@ function <span class="fstat-no" title="function not covered" >_handleActionPlanC
 /**
  * Initialize Costs Groups organism
  */
-// setTimeout(() =&gt; {
-//   const collegeCosts = document.querySelector('.college-costs');
-//   console.log('Costs.Group.init(collegeCosts)');
-//   CostsGroup.init(collegeCosts);
-// }, 20000);
-const collegeCosts = <span class="cstat-no" title="statement not covered" >document.querySelector('.college-costs');</span>
-<span class="cstat-no" title="statement not covered" >CostsGroup.init(collegeCosts);</span>
+<span class="cstat-no" title="statement not covered" >setTimeout(<span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >  console.log('Costs.Group.init(collegeCosts)');</span>
+  const collegeCosts = <span class="cstat-no" title="statement not covered" >document.querySelector('.college-costs');</span>
+<span class="cstat-no" title="statement not covered" >  CostsGroup.init(collegeCosts);</span>
+}, 5000);
 &nbsp;
 export { appView };
 &nbsp;</pre></td></tr></table></pre>
@@ -652,7 +640,7 @@ export { appView };
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-07-05T03:57:21.152Z
+                at 2023-09-02T19:17:22.729Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

@@ -25,8 +25,6 @@ module.exports = {
     'eslint:recommended',
     'plugin:import/errors',
     'plugin:jsdoc/recommended',
-    'plugin:jsx-a11y/recommended',
-    'plugin:react/recommended',
     'eslint-config-prettier',
   ],
   // Some plugins are automatically included.
