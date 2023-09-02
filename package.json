@@ -54,7 +54,7 @@
     "stylelint-less": "1.0.8"
   },
   "scripts": {
-    "dev": "npm run build && npx serve dist/",
+    "start": "npm run build && npx serve dist/",
     "lint": "./lint.sh",
     "jest": "NODE_OPTIONS=--experimental-vm-modules npx jest",
     "test": "npm run lint && npm run jest",
