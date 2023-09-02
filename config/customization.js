@@ -27,7 +27,7 @@ const social = {
 
     // Optional: Replace with the filename of a new image you have placed in `src/img/`
     // to customize the preview card thumbnail. Ideal size: 1200x630
-    social_image: 'TKTKTK',
+    social_image: 'social-share-graphic_1200x630.png',
 
     // Optional: Replace with your own brief description of the tool.
     description: 'Understand and compare your financial aid offers, plan to cover the remaining costs, estimate how much you’ll owe, and decide if you can afford that debt.'
