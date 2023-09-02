@@ -1,5 +1,24 @@
 <div class="college-costs_intro-segment">
-    {% if return_user %}
+    <!-- context["return_user"] = "iped" in request.GET and request.GET["iped"] -->
+    <section class="m-hero">
+        <div class="m-hero_wrapper">
+            <div class="m-hero_text">
+                <h1 class="m-hero_heading">{{ tool_name }}</h1>
+                {% if hero_paragraph %}
+                    <div class="m-hero_subhead">
+                        <p>{{ hero_paragraph }}</p>
+                    </div>
+                {% endif %}
+            </div>
+            <div class="m-hero_image-wrapper">
+                <div class="m-hero_image">
+                    <img src="img/hero_940.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="return_user">
         <div class="content_wrapper">
             <div class="content_main">
                 <div class="m-notification
@@ -8,13 +27,13 @@
                     {% include 'icons/error-round.svg' %}
                     <div class="m-notification_content">
                         <div class="h4 m-notification_message">
-                            This tool is not supported in your browser.
-                            Please try a newer browser or confirm that JavaScript is enabled.
+                            This tool requires JavaScrip to function. Please enable JavaScript and retry.
                         </div>
                      </div>
                 </div>
                 <div class="m-notification
-                            m-notification__visible">
+                            m-notification__visible
+                            u-js-only">
                     {% include 'icons/updating.svg' %}
                     <div class="m-notification_content">
                         <div class="h4 m-notification_message">The page is loading…</div>
@@ -22,25 +41,9 @@
                 </div>
             </div>
         </div>
-    {% else %}
-        <section class="m-hero">
-            <div class="m-hero_wrapper">
-                <div class="m-hero_text">
-                    <h1 class="m-hero_heading">{{ tool_name }}</h1>
-                    {% if hero_paragraph %}
-                        <div class="m-hero_subhead">
-                            <p>{{ hero_paragraph }}</p>
-                        </div>
-                    {% endif %}
-                </div>
-                <div class="m-hero_image-wrapper">
-                    <div class="m-hero_image">
-                        <img src="img/hero_940.png" alt="">
-                    </div>
-                </div>
-            </div>
-        </section>
+    </div>
 
+    <div class="new_user">
         <div class="content_wrapper">
             <div class="content_main">
                 <div class="block block__flush-top">
@@ -73,5 +76,5 @@
                 </div>
           </div>
       </div>
-    {% endif %}
+    </div>
 </div>
