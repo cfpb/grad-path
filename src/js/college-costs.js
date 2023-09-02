@@ -32,7 +32,12 @@ function init() {
   financialView.updateFinancialItems();
   appView.updateUI();
 
-  updateModelsFromQueryString(query);
+  if (query['iped']) {
+    updateModelsFromQueryString(query);
+  } else {
+    document.querySelector('.return_user').style.display = "none";
+    document.querySelector('.new_user').style.display = "block";
+  }
 }
 
 window.addEventListener('load', init);
