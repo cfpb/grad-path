@@ -19,24 +19,26 @@ const branding = {
 };
 
 const social = {
-    // The items in this group pertain to the OpenGraph tags found in _head.html
-    // that control how sites display a preview card when a link to the tool is shared.
+  // The items in this group pertain to the OpenGraph tags found in _head.html
+  // that control how sites display a preview card when a link to the tool is shared.
 
-    // REQUIRED: The URL where the tool will live. Used by OpenGraph tag in _head.html.
-    url: '',
+  // REQUIRED: The URL where the tool will live. Used by OpenGraph tag in _head.html.
+  url: '',
 
-    // Optional: Replace with the filename of a new image you have placed in `src/img/`
-    // to customize the preview card thumbnail. Ideal size: 1200x630
-    social_image: 'social-share-graphic_1200x630.png',
+  // Optional: Replace with the filename of a new image you have placed in `src/img/`
+  // to customize the preview card thumbnail. Ideal size: 1200x630
+  social_image: 'social-share-graphic_1200x630.png',
 
-    // Optional: Replace with your own brief description of the tool.
-    description: 'Understand and compare your financial aid offers, plan to cover the remaining costs, estimate how much you’ll owe, and decide if you can afford that debt.'
-}
+  // Optional: Replace with your own brief description of the tool.
+  description:
+    'Understand and compare your financial aid offers, plan to cover the remaining costs, estimate how much you’ll owe, and decide if you can afford that debt.',
+};
 
 const content = {
-    // Optional: Paragraph to go below the tool name in the hero banner on the homepage.
-    hero_paragraph: 'Have a financial aid offer? We’ll help you plan to finish your program with debt you can afford.',
-}
+  // Optional: Paragraph to go below the tool name in the hero banner on the homepage.
+  hero_paragraph:
+    'Have a financial aid offer? We’ll help you plan to finish your program with debt you can afford.',
+};
 
 const context = { ...branding, ...social, ...content };
 

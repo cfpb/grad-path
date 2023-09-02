@@ -78,20 +78,20 @@ These can take a while!
 In rough order of importance:
 
 - [x] Header and footer need a basic design with a simple configuration mechanism so that they can be customized without altering source files.
-  - [ ] OpenGraph properties also need some sensible defaults and configurability.
-    - Mostly done, just need a default image
+  - [x] OpenGraph properties also need some sensible defaults and configurability.
 - [x] Icons have temporary placeholder text; need to be replaced with their actual SVG code.
 - [ ] CostsGroup issues:
   - [x] Need to delay init of CostsGroup
   - [ ] They are currently not closable once opened
   - [ ] Consider simplifying to a `details` element implementation
 - [ ] Use JS to bypass intro if user is returning via personal URL.
-- [ ] Eliminate requests for Avenir Next (coming from cf-typography).
+- [x] Eliminate requests for Avenir Next (coming from cf-typography).
 - [ ] Provide a simple Docker container for easy deployment.
 - [ ] Eliminate feedback forms, or are they useful as placebo "questions for reflection"?
 - [ ] Optimize hero image and serve different sizes to different viewports.
 - [ ] The specific `npm run scripts`, `styles`, and `templates` commands don't put their results in the correct folder.
 - [ ] `npm run watch` doesn't watch enough files to be useful.
+- [x] Audit npm packages and remove unneeded ones
 
 
 ## Getting help

@@ -13,7 +13,7 @@ less/no-duplicate-variables
   https://github.com/ssivanatarajan/stylelint-less/issues/6 is addressed.
 */
 module.exports = {
-  extends: ['stylelint-config-recommended-less', 'stylelint-config-prettier'],
+  extends: ['stylelint-config-recommended-less'],
   ignoreFiles: ['packages/**/node_modules/**/*.less'],
   customSyntax: 'postcss-less',
   rules: {
