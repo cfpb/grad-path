@@ -79,9 +79,14 @@ To see your changes in the Docker container, you will need to:
 As this is a bit of a hassle, we recommend you use the basic Node workflow
 for local development and only build Docker images for production deployment.
 
-### Branding and content configuration
+### Branding and content customization
 
-_(simple branding configuration mechanism to be added and documented here)_
+Before deploying the tool, you will want to configure it to,
+at minimum, reflect some basic details about your organization.
+Beyond that initial configuration, there are several ways that
+you can customize the branding or content.
+
+[Learn more about how to customize the tool](CUSTOMIZATION.md)
 
 
 ### Linting, formatting, and testing
@@ -117,7 +122,7 @@ In rough order of importance:
 - [x] Eliminate requests for Avenir Next (coming from cf-typography).
 - [x] Provide a simple Docker container for easy deployment.
 - [ ] Accessibility testing and remediation
-- [ ] Document config/customization options
+- [x] Document config/customization options
 - [ ] Eliminate feedback forms, or are they useful as placebo "questions for reflection"?
 - [ ] Optimize hero image and serve different sizes to different viewports.
 - [ ] Add favicon/apple-touch-icon (or delete references)
