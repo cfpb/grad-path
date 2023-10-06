@@ -26,7 +26,7 @@ function schoolSearch(searchTerm) {
   searchTerm = searchTerm.trim().replace(/\W+/g, ' ');
   if (searchTerm.length > 2) {
     const url =
-      'http://localhost:8000' +
+      'https://www.consumerfinance.gov' +
       '/paying-for-college2/understanding-your-financial-aid-offer' +
       '/api/search-schools.json?q=' +
       searchTerm;
@@ -41,7 +41,7 @@ function schoolSearch(searchTerm) {
  */
 function getConstants() {
   const url =
-    'http://localhost:8000' +
+    'https://www.consumerfinance.gov' +
     '/paying-for-college2/understanding-your-financial-aid-offer' +
     '/api/constants/';
   return getApi(url);
@@ -53,7 +53,7 @@ function getConstants() {
  */
 function getExpenses() {
   const url =
-    'http://localhost:8000' +
+    'https://www.consumerfinance.gov' +
     '/paying-for-college2/understanding-your-financial-aid-offer' +
     '/api/expenses/';
   return getApi(url);
@@ -66,7 +66,7 @@ function getExpenses() {
  */
 function getSchoolData(iped) {
   const url =
-    'http://localhost:8000' +
+    'https://www.consumerfinance.gov' +
     '/paying-for-college2/understanding-your-financial-aid-offer' +
     '/api/school/' +
     iped;
