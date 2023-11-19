@@ -17,11 +17,8 @@ main.college-costs {
 
   // 2 vs 4 year
   &[data-state_communitycollege='true'] {
-    span.community-college {
-      display: inline;
-    }
-    tr.community-college {
-      display: table-row;
+    .community-college {
+      display: revert;
     }
     span.four-year-college {
       display: none;
@@ -32,10 +29,7 @@ main.college-costs {
   &[data-state_programlevel='undergrad'] {
     &[data-state_programdependency='dependent'] {
       .dependent-content {
-        display: block;
-      }
-      span.dependent-content {
-        display: inline;
+        display: revert;
       }
       .independent-content {
         display: none;
@@ -44,10 +38,7 @@ main.college-costs {
 
     &[data-state_programdependency='independent'] {
       .independent-content {
-        display: block;
-      }
-      span.independent-content {
-        display: inline;
+        display: revert;
       }
       .dependent-content {
         display: none;
@@ -55,16 +46,7 @@ main.college-costs {
     }
 
     .undergrad-content {
-      display: block;
-    }
-    span.undergrad-content {
-      display: inline;
-    }
-    li.undergrad-content {
-      display: list-item;
-    }
-    tr.undergrad-content {
-      display: table-row;
+      display: revert;
     }
   }
 
@@ -76,37 +58,19 @@ main.college-costs {
 
   &[data-state_programlevel='graduate'] {
     .graduate-content {
-      display: block;
-    }
-    span.graduate-content {
-      display: inline;
-    }
-    li.graduate-content {
-      display: list-item;
-    }
-    tr.graduate-content {
-      display: table-row;
+      display: revert;
     }
   }
 
   &[data-state_programtype='associates'] {
     .associates-content {
-      display: block;
-    }
-    span.associates-content {
-      display: inline;
-    }
-    li.associates-content {
-      display: list-item;
-    }
-    tr.associates-content {
-      display: table-row;
+      display: revert;
     }
   }
 
   &[data-state_programtype][data-state_schoolhasprograms='yes'] {
     .program-select {
-      display: block;
+      display: revert;
     }
   }
 
@@ -114,19 +78,19 @@ main.college-costs {
 
   &[data-state_private-loan-section='active'] {
     .private-loan-section {
-      display: block;
+      display: revert;
     }
   }
 
   &[data-state_parentplus-loan-section='active'] {
     .parentplus-loan-section {
-      display: block;
+      display: revert;
     }
   }
 
   &[data-state_gradplus-loan-section='active'] {
     .gradplus-loan-section {
-      display: block;
+      display: revert;
     }
   }
 
@@ -150,7 +114,7 @@ main.college-costs {
     }
 
     .college-costs_tool-section.active {
-      display: block;
+      display: revert;
     }
   }
 
@@ -201,44 +165,29 @@ main.college-costs {
   // Program selection visibility
   &[data-state_schoolhasprograms='yes'] {
     [data-state-based-visibility='school-has-programs'] {
-      display: block;
-    }
-    span[data-state-based-visibility='school-has-programs'] {
-      display: inline;
+      display: revert;
     }
   }
   &[data-state_schoolhasprograms='no'] {
     [data-state-based-visibility='school-no-programs'] {
-      display: block;
-    }
-    span[data-state-based-visibility='school-no-programs'] {
-      display: inline;
+      display: revert;
     }
   }
 
   &[data-state_pid] {
     [data-state-based-visibility='program-is-selected'] {
-      display: block;
-    }
-    span[data-state-based-visibility='program-is-selected'] {
-      display: inline;
+      display: revert;
     }
   }
   &:not([data-state_pid]) {
     [data-state-based-visibility='no-program-selected'] {
-      display: block;
-    }
-    span[data-state-based-visibility='no-program-selected'] {
-      display: inline;
+      display: revert;
     }
   }
 
   &[data-state_programtype='graduate']:not([data-state_pid]) {
     [data-state-based-visibility='no-program-selected'] {
-      display: block;
-    }
-    span[data-state-based-visibility='no-program-selected'] {
-      display: inline;
+      display: revert;
     }
 
     .college-costs_tool-section.college-costs_tool-section__affording
@@ -304,19 +253,13 @@ main.college-costs {
 
   &[data-state_debtruleviolation='true'] {
     [data-state-based-visibility='debt-rule-violation'] {
-      display: block;
-    }
-    span[data-state-based-visibility='debt-rule-violation'] {
-      display: inline;
+      display: revert;
     }
   }
 
   &[data-state_debtruleviolation='false'] {
-    span[data-state-based-visibility='debt-rule-passed'] {
-      display: inline;
-    }
-    [data-state-based-visibility='debt-rule-okay'] {
-      display: block;
+    [data-state-based-visibility='debt-rule-passed'] {
+      display: revert;
     }
   }
 

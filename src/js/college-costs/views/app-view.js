@@ -55,8 +55,8 @@ const appView = {
     if (navigator.clipboard) {
       navigator.clipboard.writeText(window.location.href).then(function () {
         const btn = event.target.closest('button');
-        const copyBtnDefaultText = btn.querySelector('#default-text');
-        const copyBtnSuccessText = btn.querySelector('#success-text');
+        const copyBtnDefaultText = btn.querySelector('.default-text');
+        const copyBtnSuccessText = btn.querySelector('.success-text');
         copyBtnDefaultText.classList.add(HIDDEN_CLASS);
         copyBtnSuccessText.classList.remove(HIDDEN_CLASS);
         setTimeout(function () {
