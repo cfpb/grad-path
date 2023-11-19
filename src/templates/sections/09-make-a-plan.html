@@ -475,14 +475,8 @@
                 <h3 class="other-loan-options">Additional loan options</h3>
                 <p> If you still have uncovered costs after working with the financial aid office to exhaust all the options listed above, you and your family have two more loan options to consider: </p>
                 <ul>
-                    <div class="dependent-content">
-                        <li><strong>Federal Parent PLUS loan</strong>: For dependent students at participating schools, parents and stepparents may be able to apply for a Parent PLUS loan from the U.S. Department of Education. Check with the financial aid office before including this in your plan.</li>
-                    </div>
-
-                    <div class="graduate-content">
-                        <li><strong>Direct PLUS loan (aka Grad PLUS)</strong>: Graduate students can apply for a Direct PLUS loan from the U.S. Department of Education.</li>
-                    </div>
-
+                    <li class="dependent-content"><strong>Federal Parent PLUS loan</strong>: For dependent students at participating schools, parents and stepparents may be able to apply for a Parent PLUS loan from the U.S. Department of Education. Check with the financial aid office before including this in your plan.</li>
+                    <li class="graduate-content"><strong>Direct PLUS loan (aka Grad PLUS)</strong>: Graduate students can apply for a Direct PLUS loan from the U.S. Department of Education.</li>
                     <li><strong>Private student loan</strong>: You or a family member can apply for a private student loan from a bank or credit union. Students without credit history are typically required to have a family member cosign as a fellow borrower on the loan.</li>
                 </ul>
                 {{ notification.render(
@@ -490,17 +484,11 @@
                     true,
                     'Know before you go',
                     '<ul>
-                        <div class="dependent-content">
-                            <li><strong>Accessibility</strong>: <span class="undergrad-content">Parent</span><span class="graduate-content">Grad</span> PLUS Loans are typically easier to qualify for than private loans. All borrowers can save money by comparison shopping—apply to multiple lenders to get the best terms.</li>
-                        </div>
+                        <li class="dependent-content"><strong>Accessibility</strong>: <span class="undergrad-content">Parent</span><span class="graduate-content">Grad</span> PLUS Loans are typically easier to qualify for than private loans. All borrowers can save money by comparison shopping—apply to multiple lenders to get the best terms.</li>
 
-                        <div class="dependent-content">
-                            <li><strong>Cost</strong>: For borrowers and cosigners with strong credit, private loans may offer lower interest rates than <span class="undergrad-content">Parent</span> <span class="graduate-content">Grad</span> PLUS loans&mdash;but watch out for variable interest rates, which can increase in the future. Any borrower can save money on interest by starting repayment as soon as possible.</li>
-                        </div>
+                        <li class="dependent-content"><strong>Cost</strong>: For borrowers and cosigners with strong credit, private loans may offer lower interest rates than <span class="undergrad-content">Parent</span> <span class="graduate-content">Grad</span> PLUS loans&mdash;but watch out for variable interest rates, which can increase in the future. Any borrower can save money on interest by starting repayment as soon as possible.</li>
 
-                        <div class="independent-content">
-                            <li><strong>Cost</strong>: You may be able to reduce the cost of the loan by comparison shopping — apply to multiple lenders to get the best terms. Watch out for variable interest rates, which can increase in the future. You can save money on interest by starting repayment as soon as possible.</li>
-                        </div>
+                        <li class="independent-content"><strong>Cost</strong>: You may be able to reduce the cost of the loan by comparison shopping — apply to multiple lenders to get the best terms. Watch out for variable interest rates, which can increase in the future. You can save money on interest by starting repayment as soon as possible.</li>
 
                         <li><strong>Protections</strong>: <span class="dependent-content">Parent PLUS loans offer some, but not all, of the protections as Federal Direct Loans to students.</span> Private loans are not legally required to offer the same borrower protections and repayment options as any federal loans.</li>
 
@@ -599,7 +587,7 @@
                             'information',
                             true,
                             '',
-                            'More details about parent PLUS loans can be found on the <a href="https://studentaid.gov/understand-aid/types/loans/plus/parent" target="_blank" class="external-link" rel="noreferrer noopener">Federal Student Aid website.</a></span>' | safe
+                            'More details about parent PLUS loans can be found on the <a href="https://studentaid.gov/understand-aid/types/loans/plus/parent" target="_blank" class="external-link" rel="noreferrer noopener">Federal Student Aid website.</a>' | safe
                         ) }}
                     {% endcall %}
                 </div>

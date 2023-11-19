@@ -14,7 +14,7 @@ const navigationView = {
   _navMenu: null,
   _navListItems: null,
   _navItems: null,
-  _navButtons: null,
+  // _navButtons: null,
   _nextButton: null,
   _appSegment: null,
   _stateDomElem: null,
@@ -44,13 +44,13 @@ const navigationView = {
     // clear active-sections
     navigationView._navItems.forEach((elem) => {
       elem.classList.remove('active-section');
-      elem.setAttribute('aria-selected', false);
     });
 
     const navItem = document.querySelector(
       '[data-nav_item="' + activeName + '"]'
     );
-    const activeElem = navItem.closest('li');
+    // const activeElem = navItem.closest('li');
+    const activeElem = navItem;
     const activeParent = activeElem.closest(
       '.o-secondary-nav_list-item__parent'
     );
@@ -61,10 +61,8 @@ const navigationView = {
     });
 
     activeElem.setAttribute('data-nav-is-active', 'True');
-    activeElem.setAttribute('aria-selected', true);
     activeParent.setAttribute('data-nav-is-open', 'True');
     activeParent.setAttribute('data-nav-is-active', 'True');
-    activeElem.setAttribute('aria-selected', true);
     activeParent
       .querySelectorAll('.o-secondary-nav_list__children li')
       .forEach((elem) => {
@@ -127,7 +125,7 @@ const navigationView = {
    */
   init: function (body, iped) {
     this._navMenu = body.querySelector('.o-secondary-nav');
-    this._navButtons = body.querySelectorAll('.o-secondary-nav a');
+    this._navButtons = body.querySelectorAll('.o-secondary-nav button');
     this._navListItems = body.querySelectorAll('.o-secondary-nav li');
     this._navItems = body.querySelectorAll('[data-nav_item]');
     this._nextButton = body.querySelector(
@@ -158,6 +156,9 @@ const navigationView = {
  * @param { string } iped - String representing the chosen school.
  */
 function _addButtonListeners(iped) {
+  navigationView._navItems.forEach((elem) => {
+    elem.addEventListener('click', _handleNavButtonClick);
+  });
   navigationView._navButtons.forEach((elem) => {
     elem.addEventListener('click', _handleNavButtonClick);
   });
