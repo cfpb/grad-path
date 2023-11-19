@@ -35,8 +35,8 @@ function init() {
   if (query['iped']) {
     updateModelsFromQueryString(query);
   } else {
-    document.querySelector('.return_user').style.display = "none";
-    document.querySelector('.new_user').style.display = "block";
+    document.querySelector('.return_user').style.display = 'none';
+    document.querySelector('.new_user').style.display = 'block';
   }
 }
 

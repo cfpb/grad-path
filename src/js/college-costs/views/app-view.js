@@ -7,7 +7,6 @@ import { sendAnalyticsEvent } from '../util/analytics.js';
 import { updateFinancialViewAndFinancialCharts } from '../dispatchers/update-view.js';
 import { updateState } from '../dispatchers/update-state.js';
 import { getStateValue } from '../dispatchers/get-model-values.js';
-import { CostsGroup } from '../CostsGroup.js';
 
 const HIDDEN_CLASS = 'u-hidden';
 const appView = {
@@ -177,14 +176,5 @@ function _handleActionPlanClick(event) {
   const target = event.target;
   updateState.byProperty('actionPlan', target.value);
 }
-
-/**
- * Initialize Costs Groups organism
- */
-setTimeout(() => {
-  console.log('Costs.Group.init(collegeCosts)');
-  const collegeCosts = document.querySelector('.college-costs');
-  CostsGroup.init(collegeCosts);
-}, 5000);
 
 export { appView };
