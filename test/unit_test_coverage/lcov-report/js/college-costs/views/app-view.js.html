@@ -25,7 +25,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/59</span>
+                <span class='fraction'>0/55</span>
             </div>
         
             
@@ -39,14 +39,14 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/20</span>
+                <span class='fraction'>0/19</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/59</span>
+                <span class='fraction'>0/55</span>
             </div>
         
             
@@ -243,18 +243,7 @@
 <a name='L178'></a><a href='#L178'>178</a>
 <a name='L179'></a><a href='#L179'>179</a>
 <a name='L180'></a><a href='#L180'>180</a>
-<a name='L181'></a><a href='#L181'>181</a>
-<a name='L182'></a><a href='#L182'>182</a>
-<a name='L183'></a><a href='#L183'>183</a>
-<a name='L184'></a><a href='#L184'>184</a>
-<a name='L185'></a><a href='#L185'>185</a>
-<a name='L186'></a><a href='#L186'>186</a>
-<a name='L187'></a><a href='#L187'>187</a>
-<a name='L188'></a><a href='#L188'>188</a>
-<a name='L189'></a><a href='#L189'>189</a>
-<a name='L190'></a><a href='#L190'>190</a>
-<a name='L191'></a><a href='#L191'>191</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L181'></a><a href='#L181'>181</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -429,15 +418,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -452,7 +432,6 @@ import { sendAnalyticsEvent } from '../util/analytics.js';
 import { updateFinancialViewAndFinancialCharts } from '../dispatchers/update-view.js';
 import { updateState } from '../dispatchers/update-state.js';
 import { getStateValue } from '../dispatchers/get-model-values.js';
-import { CostsGroup } from '../CostsGroup.js';
 &nbsp;
 const HIDDEN_CLASS = <span class="cstat-no" title="statement not covered" >'u-hidden';</span>
 const appView = <span class="cstat-no" title="statement not covered" >{</span>
@@ -500,8 +479,8 @@ const appView = <span class="cstat-no" title="statement not covered" >{</span>
 <span class="cstat-no" title="statement not covered" >    if (navigator.clipboard) {</span>
 <span class="cstat-no" title="statement not covered" >      navigator.clipboard.writeText(window.location.href).then(<span class="fstat-no" title="function not covered" >fu</span>nction () {</span>
         const btn = <span class="cstat-no" title="statement not covered" >event.target.closest('button');</span>
-        const copyBtnDefaultText = <span class="cstat-no" title="statement not covered" >btn.querySelector('#default-text');</span>
-        const copyBtnSuccessText = <span class="cstat-no" title="statement not covered" >btn.querySelector('#success-text');</span>
+        const copyBtnDefaultText = <span class="cstat-no" title="statement not covered" >btn.querySelector('.default-text');</span>
+        const copyBtnSuccessText = <span class="cstat-no" title="statement not covered" >btn.querySelector('.success-text');</span>
 <span class="cstat-no" title="statement not covered" >        copyBtnDefaultText.classList.add(HIDDEN_CLASS);</span>
 <span class="cstat-no" title="statement not covered" >        copyBtnSuccessText.classList.remove(HIDDEN_CLASS);</span>
 <span class="cstat-no" title="statement not covered" >        setTimeout(<span class="fstat-no" title="function not covered" >fu</span>nction () {</span>
@@ -623,15 +602,6 @@ function <span class="fstat-no" title="function not covered" >_handleActionPlanC
 <span class="cstat-no" title="statement not covered" >  updateState.byProperty('actionPlan', target.value);</span>
 }
 &nbsp;
-/**
- * Initialize Costs Groups organism
- */
-<span class="cstat-no" title="statement not covered" >setTimeout(<span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >  console.log('Costs.Group.init(collegeCosts)');</span>
-  const collegeCosts = <span class="cstat-no" title="statement not covered" >document.querySelector('.college-costs');</span>
-<span class="cstat-no" title="statement not covered" >  CostsGroup.init(collegeCosts);</span>
-}, 5000);
-&nbsp;
 export { appView };
 &nbsp;</pre></td></tr></table></pre>
 
@@ -640,7 +610,7 @@ export { appView };
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-09-02T19:17:22.729Z
+                at 2023-11-19T22:32:55.856Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

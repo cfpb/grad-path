@@ -26,15 +26,14 @@
 
    ========================================================================== #}
 
-{% macro flyout(value) %}
-<div class="o-costs-group">
-    <button class="o-costs-group_header
-                   o-costs-group_header__collapsed
-                   financial-item
-                   financial-item__flyout
-                   {{ ('financial-item__' + value.status | safe ) if value.status else ''}}"
-            type="button">
-      <span class="flex-container">
+{% macro details(value) %}
+<details class="o-costs-group">
+    <summary class="o-costs-group_header
+                    o-costs-group_header__collapsed
+                    financial-item
+                    financial-item__flyout
+                    {{ ('financial-item__' + value.status | safe ) if value.status else ''}}">
+      <span class="o-costs-group_target">
         <span class="h4 o-costs-group_label">
             {{ value.label }}
         </span>
@@ -42,10 +41,10 @@
             <span class="financial-item_value" {{ value.data_attribute | safe if value.data_attribute else '' }} >
                {{ value.value }}
             </span>
-            <span class="o-costs-group_cue-open" role="img" aria-label="{{ 'Edit' if value.is_editable else 'Show' }}">
+            <span class="o-costs-group_cue-open" role="img">
                 {% if value.is_editable %}{% include 'icons/edit.svg' %}{% else %}{% include 'icons/plus-round.svg' %}{% endif %}
             </span>
-            <span class="o-costs-group_cue-close" role="img" aria-label="{{ 'Save' if value.is_editable else 'Hide' }}">
+            <span class="o-costs-group_cue-close" role="img">
                 {% if value.is_editable %}{% include 'icons/approved-round.svg' %}{% else %}{% include 'icons/minus-round.svg' %}{% endif %}
             </span>
         </span>
@@ -55,15 +54,15 @@
                 {{ value.note | safe }}
             </span>
         {% endif %}
-    </button>
+    </summary>
     <div class="o-costs-group_content">
         {% if caller is defined %}
             {{ caller() }}
         {% endif %}
     </div>
-</div>
+</details>
 {% endmacro %}
 
 {% if value %}
-    {{ flyout(value) }}
+    {{ details(value) }}
 {% endif %}

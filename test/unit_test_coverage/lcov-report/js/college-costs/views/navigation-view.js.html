@@ -25,7 +25,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/85</span>
+                <span class='fraction'>0/84</span>
             </div>
         
             
@@ -39,14 +39,14 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/17</span>
+                <span class='fraction'>0/18</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/85</span>
+                <span class='fraction'>0/84</span>
             </div>
         
             
@@ -305,7 +305,8 @@
 <a name='L240'></a><a href='#L240'>240</a>
 <a name='L241'></a><a href='#L241'>241</a>
 <a name='L242'></a><a href='#L242'>242</a>
-<a name='L243'></a><a href='#L243'>243</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L243'></a><a href='#L243'>243</a>
+<a name='L244'></a><a href='#L244'>244</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -351,24 +352,22 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -464,6 +463,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -563,7 +565,7 @@ const navigationView = <span class="cstat-no" title="statement not covered" >{</
   _navMenu: null,
   _navListItems: null,
   _navItems: null,
-  _navButtons: null,
+  // _navButtons: null,
   _nextButton: null,
   _appSegment: null,
   _stateDomElem: null,
@@ -593,13 +595,13 @@ const navigationView = <span class="cstat-no" title="statement not covered" >{</
     // clear active-sections
 <span class="cstat-no" title="statement not covered" >    navigationView._navItems.forEach(<span class="fstat-no" title="function not covered" >(e</span>lem) =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >      elem.classList.remove('active-section');</span>
-<span class="cstat-no" title="statement not covered" >      elem.setAttribute('aria-selected', false);</span>
     });
 &nbsp;
     const navItem = <span class="cstat-no" title="statement not covered" >document.querySelector(</span>
       '[data-nav_item="' + activeName + '"]'
     );
-    const activeElem = <span class="cstat-no" title="statement not covered" >navItem.closest('li');</span>
+    // const activeElem = navItem.closest('li');
+    const activeElem = <span class="cstat-no" title="statement not covered" >navItem;</span>
     const activeParent = <span class="cstat-no" title="statement not covered" >activeElem.closest(</span>
       '.o-secondary-nav_list-item__parent'
     );
@@ -610,10 +612,8 @@ const navigationView = <span class="cstat-no" title="statement not covered" >{</
     });
 &nbsp;
 <span class="cstat-no" title="statement not covered" >    activeElem.setAttribute('data-nav-is-active', 'True');</span>
-<span class="cstat-no" title="statement not covered" >    activeElem.setAttribute('aria-selected', true);</span>
 <span class="cstat-no" title="statement not covered" >    activeParent.setAttribute('data-nav-is-open', 'True');</span>
 <span class="cstat-no" title="statement not covered" >    activeParent.setAttribute('data-nav-is-active', 'True');</span>
-<span class="cstat-no" title="statement not covered" >    activeElem.setAttribute('aria-selected', true);</span>
 <span class="cstat-no" title="statement not covered" >    activeParent</span>
       .querySelectorAll('.o-secondary-nav_list__children li')
       .forEach(<span class="fstat-no" title="function not covered" >(e</span>lem) =&gt; {
@@ -676,7 +676,7 @@ const navigationView = <span class="cstat-no" title="statement not covered" >{</
    */
   init: <span class="fstat-no" title="function not covered" >fu</span>nction (body, iped) {
 <span class="cstat-no" title="statement not covered" >    this._navMenu = body.querySelector('.o-secondary-nav');</span>
-<span class="cstat-no" title="statement not covered" >    this._navButtons = body.querySelectorAll('.o-secondary-nav a');</span>
+<span class="cstat-no" title="statement not covered" >    this._navButtons = body.querySelectorAll('.o-secondary-nav button');</span>
 <span class="cstat-no" title="statement not covered" >    this._navListItems = body.querySelectorAll('.o-secondary-nav li');</span>
 <span class="cstat-no" title="statement not covered" >    this._navItems = body.querySelectorAll('[data-nav_item]');</span>
 <span class="cstat-no" title="statement not covered" >    this._nextButton = body.querySelector(</span>
@@ -707,6 +707,9 @@ const navigationView = <span class="cstat-no" title="statement not covered" >{</
  * @param { string } iped - String representing the chosen school.
  */
 function <span class="fstat-no" title="function not covered" >_addButtonListeners(</span>iped) {
+<span class="cstat-no" title="statement not covered" >  navigationView._navItems.forEach(<span class="fstat-no" title="function not covered" >(e</span>lem) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    elem.addEventListener('click', _handleNavButtonClick);</span>
+  });
 <span class="cstat-no" title="statement not covered" >  navigationView._navButtons.forEach(<span class="fstat-no" title="function not covered" >(e</span>lem) =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >    elem.addEventListener('click', _handleNavButtonClick);</span>
   });
@@ -796,7 +799,7 @@ export { navigationView };
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-09-02T19:17:22.729Z
+                at 2023-11-19T22:32:55.856Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>
